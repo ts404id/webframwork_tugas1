@@ -1,0 +1,5 @@
+@extends('layouts.app')
+@section('title', $member['name'].' — '.$team['name'])
+@section('content')
+<section class="wrap profile-page"><a class="back" href="{{ route('home') }}#anggota">← Kembali ke anggota</a><div class="profile-layout"><div class="portrait profile-portrait">@if($member['photo'])<img src="{{ asset($member['photo']) }}" alt="Foto {{ $member['name'] }}">@else<span class="portrait-lines" aria-hidden="true"></span><span class="initials" aria-hidden="true">{{ $member['initials'] }}</span>@endif<span class="role">{{ $member['role'] }}</span></div><div class="profile-copy"><p class="eyebrow">KENALI LEBIH DEKAT</p><h1>{{ $member['name'] }}</h1><p class="profile-nim">NIM {{ $member['nim'] }} · {{ $team['class'] }}</p><p class="lead">{{ $member['bio'] }}</p><h2>Tentang saya</h2><p>{{ $member['story'] }}</p><h2>Minat & kemampuan</h2><div class="skills">@foreach($member['skills'] as $skill)<span>{{ $skill }}</span>@endforeach</div><blockquote>“{{ $member['motto'] }}”</blockquote><p class="focus">Fokus kontribusi <strong>{{ $member['focus'] }}</strong></p></div></div></section>
+@endsection
