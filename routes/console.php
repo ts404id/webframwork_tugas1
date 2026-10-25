@@ -1,2 +1,2 @@
 <?php
-// Tambahkan perintah console khusus di sini jika diperlukan.
+// Add custom console commands here if needed.

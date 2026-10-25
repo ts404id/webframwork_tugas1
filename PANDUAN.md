@@ -1,83 +1,91 @@
-# Ruang Kelompok — Laravel 12
+# BELOG AJUM — Laravel 12
 
-Website pengenalan singkat kelompok dengan warna hitam, maroon, dan gold. Beranda + halaman detail untuk setiap anggota. Tiga anggota dan seluruh biodata adalah contoh, silakan ganti. Foto belum diberikan sehingga tampilan awal memakai inisial yang dirancang sebagai placeholder.
+A team introduction website with a black, maroon, and gold theme. It includes a home page and a dynamic profile page for each member. The English edition preserves the supplied member names, student IDs, photos, existing English biographies, and URL identifiers.
 
-## 1. Menjalankan di Windows (PowerShell atau terminal VS Code)
+## 1. Running on Windows (PowerShell or VS Code terminal)
 
-Persiapan: PHP 8.2–8.5 dan Composer. Pastikan `php -v` dan `composer -V` bisa dijalankan. PHP memerlukan ekstensi standar Laravel termasuk ctype, curl, dom, fileinfo, filter, hash, mbstring, openssl, pcre, pdo, session, tokenizer, xml. Aktifkan zip di php.ini untuk memudahkan Composer.
+Requirements: PHP compatible with Laravel 12 and Composer. Check `php -v` and `composer -V`. Enable the PHP extensions required by Laravel, including ctype, curl, dom, fileinfo, filter, hash, mbstring, openssl, pcre, pdo, session, tokenizer, and xml. Enable zip in php.ini for Composer downloads.
 
-Ekstrak ZIP. Letakkan folder `kelompok-elegan` misalnya di `C:\b.project.id\kelompok-elegan`. Buka terminal pada folder yang berisi file `artisan` dan `composer.json`:
+Extract the ZIP and open the folder containing `artisan` and `composer.json`, for example:
 
 ```powershell
-cd C:\b.project.id\kelompok-elegan
+cd C:\b.project.id\webframwork_tugas1
 composer install
-Copy-Item .env.example .env
-php artisan key:generate
+php artisan view:clear
+php artisan config:clear
 php artisan serve
 ```
 
-Buka http://127.0.0.1:8000. Hentikan server dengan Ctrl+C.
+Open http://127.0.0.1:8000. Stop the server with Ctrl+C.
 
-Jalankan perintah penyalinan .env hanya saat pemasangan pertama. Untuk Linux/macOS, ganti `Copy-Item .env.example .env` dengan `cp .env.example .env`.
-
-**Tidak perlu `composer create-project` di folder ini.** Proyek sudah memuat source aplikasi. Folder vendor akan diunduh oleh Composer dan membutuhkan internet. Tidak perlu npm, Vite, database, atau migrasi untuk website ini. Driver session dan cache memakai file. Data anggota disimpan di config/team.php.
-
-## 2. File yang paling sering diedit
-
-| File | Kegunaan |
-| --- | --- |
-| config/team.php | Nama website, kelas, mata kuliah, anggota, NIM, peran, biodata, kemampuan, motto, foto, footer |
-| public/css/style.css | Warna, jarak, ukuran teks, responsif, animasi |
-| resources/views/team/index.blade.php | Susunan halaman beranda |
-| resources/views/team/show.blade.php | Halaman profil anggota |
-| resources/views/layouts/app.blade.php | Header, navigasi, footer |
-| routes/web.php | URL dan routing |
-| app/Http/Controllers/TeamController.php | Mengambil data dan menampilkan halaman |
-| public/js/app.js | Bantuan fokus tautan internal |
-
-## 3. Mengganti anggota dan foto
-
-Edit `config/team.php`. Ganti `name`, `initials`, `nim`, `role`, `bio`, `story`, `skills`, `focus`, dan `motto`. NIM harus tetap ditulis sebagai string di dalam tanda kutip. Gunakan slug unik berisi huruf kecil, angka, atau tanda hubung, misalnya `wulan-ade`. URL profil otomatis menjadi `/anggota/wulan-ade`.
-
-Letakkan foto sendiri di `public/images/members/wulan.jpg`. Ubah data anggota:
-
-```php
-'photo' => 'images/members/braha.jpg',
-```
-
-Gunakan JPG, PNG atau WebP, idealnya potret ukuran 800 × 1000 piksel. Path tidak diawali `public/`. Jika belum punya foto, tetap gunakan `null` agar inisial muncul. Untuk menambah anggota, duplikat satu blok array anggota dan ganti slug agar unik; kartu dan jumlah anggota otomatis menyesuaikan. Untuk menghapus anggota, hapus bloknya beserta koma yang sesuai.
-
-Jika data belum berubah, jalankan `php artisan optimize:clear`, lalu muat ulang browser dengan Ctrl+F5.
-
-## 4. Warna dan struktur alur
-
-Pada bagian `:root` di public/css/style.css:
-- `--bg: #141212` untuk latar hitam.
-- `--maroon: #641f30` untuk referensi warna utama maroon. Gradien dekorasi dan kartu juga dapat diedit pada `.hero-art` dan `.portrait`.
-- `--gold: #dbb878` untuk aksen gold.
-- `--text: #f5f0e7` untuk tulisan utama.
-
-Alur: URL → routes/web.php → TeamController → config/team.php → Blade → halaman browser. Teks menggunakan escaping Blade `{{ }}`. Slug yang tidak ditemukan menghasilkan halaman 404. Tidak ada login, form pengiriman, admin panel atau pengunggahan foto melalui browser dalam lingkup proyek ini.
-
-## 5. Pemeriksaan setelah pemasangan
+The uploaded project already includes an `.env`, vendor dependencies, a Composer lock file, and a SQLite database. Keep your existing environment settings and application key. Only for a fresh installation without an `.env` file, run:
 
 ```powershell
+Copy-Item .env.example .env
 php artisan key:generate
+```
+
+On Linux/macOS, use `cp .env.example .env` instead of `Copy-Item`. Do not run `composer create-project` in this populated folder. Team data comes from config/team.php. Database use for sessions or caching depends on your `.env` settings. The team pages use public CSS and JavaScript assets and do not require a Vite build.
+
+## 2. Commonly edited files
+
+| File | Purpose |
+| --- | --- |
+| config/team.php | Website name, class, course, member details, student IDs, roles, biographies, skills, mottos, photo paths, copyright |
+| public/css/style.css | Colors, spacing, typography, responsive layouts, animations |
+| resources/views/team/index.blade.php | Home page layout and text |
+| resources/views/team/show.blade.php | Member profile page |
+| resources/views/layouts/app.blade.php | Shared header, navigation, and footer |
+| routes/web.php | URLs and route names |
+| app/Http/Controllers/TeamController.php | Data selection and view rendering |
+| public/js/app.js | Keyboard focus support for internal links |
+
+## 3. Editing members and photos
+
+Edit `config/team.php`. Change `name`, `initials`, `nim`, `role`, `bio`, `story`, `skills`, and `motto` as needed. Keep student IDs as quoted strings. Use a unique slug containing lowercase letters, numbers, or hyphens, such as `wulan-ade`. The profile URL becomes `/anggota/wulan-ade`. The `focus` field is no longer used by the supplied profile view.
+
+Place photos in `public/images/members/`, then set the matching path:
+
+```php
+'photo' => 'images/members/wulan.jpg',
+```
+
+Use JPG, PNG, or WebP, ideally a portrait image around 800 × 1000 pixels. Do not include `public/` at the start of the path. Match the filename and extension exactly, including uppercase and lowercase letters on case-sensitive servers. Use `null` to display initials instead of a photo.
+
+To add a member, duplicate a member array and assign a unique slug. Cards and the member count update automatically. To remove a member, delete that array and adjust commas where needed.
+
+If changes do not appear, run `php artisan config:clear` and `php artisan view:clear`, then reload the browser with Ctrl+F5.
+
+## 4. Colors and application flow
+
+The final CSS overrides in public/css/style.css use:
+- `--bg: #000000` for the main background.
+- `--panel: #100d0e` for card backgrounds.
+- `--maroon: #541c2b` for accent panels.
+- `--gold: #e7c58b` for gold accents.
+- `--text: #fff6e9` for primary text.
+
+Flow: URL → routes/web.php → TeamController → config/team.php → Blade → browser page. Blade `{{ }}` escapes displayed text. Unknown member slugs return a 404 page. These team pages do not provide an admin panel or browser-based photo uploads.
+
+## 5. Checks after installation
+
+```powershell
+php artisan route:list
 php artisan view:cache
 ```
 
-Buka beranda, ketiga tautan profil, navigasi Tentang/Anggota, serta URL `/anggota/tidak-ada` (harus 404). Cek tampilan pada layar laptop dan HP. Nama panjang dan jumlah anggota dapat disesuaikan melalui config.
+Open the home page, all three member profiles, and the About/Team links. Check `/anggota/not-found` returns 404. Review the layout on desktop and mobile. The original `/anggota/` route and `#anggota`/`#tentang` anchors are retained for compatibility even though their visible labels are English.
 
-## 6. Jika ingin memasukkan ke proyek Laravel 12 yang sudah ada
+## 6. Moving the pages into an existing Laravel 12 project
 
-Cadangkan proyek dulu. Salin `config/team.php`, controller TeamController, folder view layouts/team dan errors/404.blade.php, CSS, JS, favicon, serta folder images. Gabungkan rute dalam routes/web.php; jangan membuat dua rute GET `/`. Gunakan SESSION_DRIVER=file dan CACHE_STORE=file bila belum memakai database. Jalankan `php artisan optimize:clear`. Jangan menimpa .env proyek lama.
+Back up the project first. Copy config/team.php, TeamController, the layouts/team views and errors/404.blade.php, CSS, JavaScript, favicon, and member images. Merge routes/web.php without duplicating the GET `/` route. Use SESSION_DRIVER=file and CACHE_STORE=file if you do not want database-backed sessions or cache. Clear configuration and view caches. Do not overwrite the existing `.env`.
 
 ## 7. Hosting
 
-Gunakan hosting yang mendukung PHP/Laravel. Document root wajib mengarah ke folder `public`. Atur APP_ENV=production, APP_DEBUG=false, dan APP_URL sesuai domain. Simpan .env di server secara privat, pastikan storage dan bootstrap/cache dapat ditulis, lalu jalankan `composer install --no-dev --optimize-autoloader` dan `php artisan optimize`. Jangan unggah source ke hosting statis.
+Use hosting with PHP/Laravel support. Point the document root to `public`. Set APP_ENV=production, APP_DEBUG=false, and APP_URL to the actual domain. Keep `.env` private and make storage and bootstrap/cache writable. Run `composer install --no-dev --optimize-autoloader` and `php artisan optimize`. Static hosting cannot run the PHP application.
 
-## Catatan verifikasi
+## Translation notes
 
-Source aplikasi dan aset diperiksa secara statis saat dibuat. Lingkungan pembuatan tidak menyediakan PHP/Composer, sehingga instalasi dependency, rendering Blade, dan eksekusi Laravel belum diuji. Folder vendor dan composer.lock belum disertakan; Composer akan memilih dependency Laravel 12 yang kompatibel saat instalasi.
+The website text, accessibility labels, app locale, project comments, and this guide are in English. Existing English biographies and placeholders remain unchanged. Framework dependencies, Git history, database records, and historical logs are not translated. Compiled Blade view caches were removed so Laravel can regenerate the English pages. Source-level checks were performed; Laravel execution was not tested in the translation environment.
 
-Referensi: https://laravel.com/docs/12.x/installation dan https://laravel.com/docs/12.x/releases
+References: https://laravel.com/docs/12.x/installation and https://laravel.com/docs/12.x/releases

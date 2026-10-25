@@ -1,5 +1,5 @@
-// Data dan routing dirender Laravel. Halaman tetap berfungsi tanpa JavaScript.
-// Beri fokus pada tujuan tautan internal untuk akses keyboard.
+// Laravel renders the data and handles routing. The page also works without JavaScript.
+// Focus internal link targets for keyboard accessibility.
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', () => {
         const target = document.getElementById(link.hash.slice(1));

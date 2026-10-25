@@ -1,7 +1,7 @@
 {
   "name": "bproject/kelompok-elegan",
   "type": "project",
-  "description": "Website perkenalan kelompok Laravel 12",
+  "description": "Laravel 12 team introduction website",
   "license": "MIT",
   "require": {
     "php": "^8.2",

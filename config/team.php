@@ -1,16 +1,16 @@
 <?php
-// Edit seluruh identitas kelompok dan anggota di sini. Semua data berikut adalah contoh.
+// Edit the team and member details here.
 return [
     'name' => 'BELOG AJUM',
     'label' => 'BELOG AJUM',
-    'course' => 'Pemrograman Framwork',
-    'class' => 'Pemprogram Webside Berbasis Framwork · Kelas C',
-    'intro' => 'Tiga perspektif, satu semangat. Kami belajar, bertukar ide, dan tumbuh bersama melalui setiap karya.',
-    'about' => 'Kami adalah kelompok mahasiswa yang percaya bahwa hasil yang baik dimulai dari kerja sama. Dengan minat dan kemampuan yang berbeda, kami saling melengkapi untuk mengubah ide sederhana menjadi karya yang bermakna.',
-    'copyright' => 'b.project.id',
+    'course' => 'Framework Programming',
+    'class' => 'Framework-Based Web Development · Class C',
+    'intro' => 'Meet BELOG AJUM. A small team with big curiosity, unexpected ideas, and a habit of saying, “Let’s give it a try.” If it works, we keep going. If it breaks, we figure it out together.',
+    'about' => 'We are BELOG AJUM: three people with different interests and ways of thinking. Our conversations sometimes wander from website design to wondering what we were talking about in the first place. But when it is time to work, we help each other out. If someone understands, they explain. If someone is confused, they ask. If someone finds a solution, they share it. We do not know everything yet, but there is always something we want to try.',
+    'copyright' => 'BA.PROJECT',
     'members' => [
-        ['slug' => 'anggota-1', 'name' => 'Ayu Divtria', 'initials' => 'AD', 'nim' => '2501010238', 'role' => 'Anggota Kelompook', 'focus' => 'Desain & pengalaman pengguna', 'bio' => 'Menyukai tampilan yang sederhana dan detail yang bermakna. Membantu membuat ide kelompok lebih mudah dipahami secara visual.', 'story' => 'Saya tertarik dengan desain antarmuka yang nyaman digunakan. Dalam kelompok, saya bertanggung jawab merancang tampilan, memilih warna, dan memastikan konten tersusun dengan jelas.', 'skills' => ['Desain UI', 'Figma', 'Kreativitas'], 'motto' => 'Desain yang baik membuat hal rumit terasa sederhana.', 'photo' => 'images/members/ayudiv.png'],
-        ['slug' => 'anggota-2', 'name' => 'Brahadya Praja', 'initials' => 'BP', 'nim' => '2501010093', 'role' => 'Anggota Kelompok', 'focus' => 'Perencanaan & koordinasi', 'bio' => 'Senang merangkai ide dan menjaga kerja sama tim. Berfokus pada perencanaan agar setiap proses berjalan terarah.', 'story' => 'Saya memiliki ketertarikan pada pengembangan website dan manajemen proyek. Di kelompok ini, saya membantu menyusun alur kerja, membagi tugas, dan menyatukan ide dari setiap anggota.', 'skills' => ['Koordinasi', 'HTML & CSS', 'Presentasi'], 'motto' => 'Langkah kecil yang konsisten membawa perubahan besar.', 'photo' => 'images/members/braha1.png'],
-        ['slug' => 'anggota-3', 'name' => 'Tri Ananda', 'initials' => 'TA', 'nim' => '2501010256', 'role' => 'Anggota Kelompok', 'focus' => 'Kode & implementasi', 'bio' => 'Antusias mempelajari teknologi dan memecahkan masalah. Mengubah rancangan menjadi website yang dapat digunakan.', 'story' => 'Saya menyukai proses belajar melalui praktik. Peran saya adalah mengimplementasikan desain, menyusun logika aplikasi, dan memastikan setiap halaman berjalan sesuai kebutuhan kelompok.', 'skills' => ['PHP', 'Laravel', 'Problem Solving'], 'motto' => 'Belajar, mencoba, lalu membuatnya lebih baik.', 'photo' => 'images/members/nando.png'],
+        ['slug' => 'ayiudiv', 'name' => 'Ayu Divtria', 'initials' => 'AD', 'nim' => '2501010238', 'role' => 'Team Member', 'bio' => 'Not perfect, just learning, growing, and becoming a better version of myself.', 'story' => 'I am a person who enjoys trying new things and traveling to gain new experiences and explore different places and environments. I am also a responsible person who always tries to complete my tasks well and achieve the best possible results. For me, every experience is an opportunity to learn, grow, and become a better person.', 'skills' => ['UI Design', 'Figma', 'Creativity'], 'motto' => 'Not perfect, just learning, growing, and becoming a better version of myself.', 'photo' => 'images/members/ayudiv.png'],
+        ['slug' => 'braha', 'name' => 'Brahadya Praja', 'initials' => 'BP', 'nim' => '2501010093', 'role' => 'Team Member', 'bio' => 'Life is full of bugs, but curiosity keeps driving me forward. 👨‍💻🚀', 'story' => 'I tried to fix one bug and somehow made five new friends. That’s the fun of coding—there’s always another puzzle that keeps me coming back.', 'skills' => ['Coordination', 'HTML & CSS', 'Presentation'], 'motto' => 'Red errors, bright spirit.', 'photo' => 'images/members/braha1.png'],
+        ['slug' => 'nando', 'name' => 'Tri Ananda', 'initials' => 'TA', 'nim' => '2501010256', 'role' => 'Team Member', 'bio' => '-', 'story' => '-', 'skills' => ['-'], 'motto' => '-', 'photo' => 'images/members/nando.png'],
     ],
 ];
