@@ -39,7 +39,7 @@
             <h2>About me</h2>
             <p>{{ $member['story'] }}</p>
 
-            <h2>Interests & skills</h2>
+            <h2>Hobbies & skills</h2>
             <div class="skills">
                 @foreach($member['skills'] as $skill)
                     <span>{{ $skill }}</span>

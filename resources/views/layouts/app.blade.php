@@ -7,15 +7,12 @@
         name="description"
         content="Meet the members and explore their interests and roles in {{ $team['name'] }}."
     >
-    <meta name="theme-color" content="#141212">
+    <meta name="theme-color" content="#000000">
 
     <title>@yield('title', $team['name'])</title>
 
-    <link
-        rel="icon"
-        href="{{ asset('favicon.svg') }}"
-        type="image/svg+xml"
-    >
+    <link rel="icon" href="{{ asset('images/logo/favicon.png') }}" type="image/png">
+
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -26,18 +23,23 @@
 
     <header class="header">
         <div class="wrap nav">
+            {{-- Logo dan nama berada dalam satu link agar tetap sejajar. --}}
             <a class="brand" href="{{ route('home') }}">
-                <span class="brand-icon" aria-hidden="true">
-                    BA.<span></span>
-                </span>
+                <img
+                    class="navbar-logo"
+                    src="{{ asset('images/logo/favicon.png') }}"
+                    alt=""
+                    width="48"
+                    height="48"
+                >
 
-                <span>
-                    {{ $team['name'] }}
+                <span class="brand-text">
+                    <span class="brand-name">{{ $team['name'] }}</span>
                     <small>CLUELESS, BUT MAKE IT CONFIDENT</small>
                 </span>
             </a>
 
-            <nav aria-label="Main navigation">
+            <nav class="nav-links" aria-label="Main navigation">
                 <a
                     href="{{ route('home') }}"
                     @if(request()->routeIs('home'))

@@ -1,22 +1,23 @@
-/* Edit the main color palette here. All fonts use system fonts, without a CDN. */
+/* 01. Warna utama dan pengaturan dasar */
 :root {
-    --bg: #141212;
-    --panel: #1c1919;
-    --maroon: #641f30;
-    --gold: #dbb878;
-    --text: #f5f0e7;
-    --muted: #bdb4ae;
+    --bg: #000000;
+    --panel: #100d0e;
+    --maroon: #541c2b;
+    --gold: #e7c58b;
+    --text: #fff6e9;
+    --muted: #d4cbc3;
     --line: #39302d;
-    --serif: Georgia,'Times New Roman',serif
+    --serif: Georgia, 'Times New Roman', serif;
 }
+/* Edit the main color palette here. All fonts use system fonts, without a CDN. */
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 105px
+    scroll-padding-top: 105px;
 }
 
 body {
@@ -24,28 +25,28 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: Arial,Helvetica,sans-serif;
-    line-height: 1.6
+    line-height: 1.6;
 }
 
 a {
     color: inherit;
-    text-decoration: none
+    text-decoration: none;
 }
 
 a:focus-visible {
     outline: 2px solid var(--gold);
-    outline-offset: 6px
+    outline-offset: 6px;
 }
 
 ::selection {
     background: var(--gold);
-    color: var(--bg)
+    color: var(--bg);
 }
 
 .wrap {
     max-width: 1160px;
     width: calc(100% - 96px);
-    margin-inline: auto
+    margin-inline: auto;
 }
 
 .header {
@@ -53,71 +54,13 @@ a:focus-visible {
     background: rgba(20,18,18,.96);
     position: sticky;
     top: 0;
-    z-index: 10
+    z-index: 10;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 92px;
-    gap: 24px
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    font-weight: 600;
-    font-size: 17px
-}
-
-.brand-icon {
-    display: grid;
-    place-content: center;
-    width: 55px;
-    height: 46px;
-    border: 1px solid #755e40;
-    font: 32px var(--serif);
-    position: relative
-}
-
-.brand-icon span {
-    position: absolute;
-    right: 5px;
-    bottom: 0;
-    color: var(--gold)
-}
-
-.brand small {
-    display: block;
-    font-size: 8px;
-    letter-spacing: 2px;
-    color: var(--muted);
-    margin-top: 3px
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    font-size: 13px
-}
-
-nav a:hover,
-nav a[aria-current],
+.nav-links a:hover,
+.nav-links a[aria-current],
 .footer a:hover {
-    color: var(--gold)
-}
-
-.nav-cta {
-    border: 1px solid #6c5639;
-    padding: 10px 17px
-}
-
-.nav-cta span {
-    margin-left: 18px;
-    color: var(--gold)
+    color: var(--gold);
 }
 
 .hero {
@@ -125,7 +68,7 @@ nav a[aria-current],
     grid-template-columns: 1.2fr 1fr;
     gap: 70px;
     align-items: center;
-    padding-block: 76px 80px
+    padding-block: 76px 80px;
 }
 
 .eyebrow {
@@ -134,7 +77,7 @@ nav a[aria-current],
     font-weight: 600;
     color: var(--gold);
     margin: 0 0 22px;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 .eyebrow>span {
@@ -143,26 +86,26 @@ nav a[aria-current],
     height: 6px;
     background: var(--gold);
     border-radius: 50%;
-    margin-right: 8px
+    margin-right: 8px;
 }
 
 h1,
 h2,
 h3,
 p {
-    margin-top: 0
+    margin-top: 0;
 }
 
 h1 {
     font: clamp(46px,5.5vw,76px)/1.09 var(--serif);
     letter-spacing: -2.4px;
-    margin-bottom: 25px
+    margin-bottom: 25px;
 }
 
 em {
     color: var(--gold);
     font-family: var(--serif);
-    font-weight: 400
+    font-weight: 400;
 }
 
 .lead {
@@ -170,7 +113,7 @@ em {
     font-size: 15px;
     line-height: 1.9;
     color: var(--muted);
-    margin-bottom: 29px
+    margin-bottom: 29px;
 }
 
 .button {
@@ -182,16 +125,16 @@ em {
     padding: 14px 23px;
     font-weight: 600;
     font-size: 12px;
-    transition: background .2s,transform .2s
+    transition: background .2s,transform .2s;
 }
 
 .button:hover {
     background: #efd29d;
-    transform: translateY(-2px)
+    transform: translateY(-2px);
 }
 
 .button span {
-    font-size: 20px
+    font-size: 20px;
 }
 
 .hero-note {
@@ -200,12 +143,12 @@ em {
     align-items: center;
     margin-top: 28px;
     color: var(--muted);
-    font-size: 10px
+    font-size: 10px;
 }
 
 .mini-avatars {
     display: flex;
-    padding-left: 6px
+    padding-left: 6px;
 }
 
 .mini-avatars i {
@@ -219,15 +162,15 @@ em {
     background: #58313b;
     font-size: 8px;
     font-style: normal;
-    color: #f8e9d2
+    color: #f8e9d2;
 }
 
 .mini-avatars i:nth-child(2) {
-    background: #69523e
+    background: #69523e;
 }
 
 .mini-avatars i:nth-child(3) {
-    background: #363638
+    background: #363638;
 }
 
 .hero-art {
@@ -236,14 +179,14 @@ em {
     position: relative;
     overflow: hidden;
     border: 1px solid #954557;
-    isolation: isolate
+    isolation: isolate;
 }
 
 .art-grid {
     position: absolute;
     inset: 0;
     background-image: linear-gradient(#e2b7750a 1px,transparent 1px),linear-gradient(90deg,#e2b7750a 1px,transparent 1px);
-    background-size: 48px 48px
+    background-size: 48px 48px;
 }
 
 .orbit {
@@ -254,14 +197,14 @@ em {
     height: 410px;
     right: -110px;
     top: -115px;
-    z-index: -1
+    z-index: -1;
 }
 
 .orbit-two {
     width: 310px;
     height: 310px;
     right: -60px;
-    top: -65px
+    top: -65px;
 }
 
 .art-top {
@@ -270,7 +213,7 @@ em {
     left: 29px;
     font-size: 8px;
     letter-spacing: 2.3px;
-    color: #e7c7ab
+    color: #e7c7ab;
 }
 
 .art-star {
@@ -279,7 +222,7 @@ em {
     top: 70px;
     font-size: 85px;
     color: var(--gold);
-    line-height: 1
+    line-height: 1;
 }
 
 .art-word {
@@ -287,12 +230,12 @@ em {
     left: 32px;
     top: 145px;
     font: 61px/.98 var(--serif);
-    letter-spacing: -2px
+    letter-spacing: -2px;
 }
 
 .art-word i {
     color: #e5c495;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .art-bottom {
@@ -307,11 +250,11 @@ em {
     padding-top: 18px;
     font-size: 8px;
     letter-spacing: 1.5px;
-    color: #ecd9c5
+    color: #ecd9c5;
 }
 
 .art-bottom>span:last-child {
-    font-size: 28px
+    font-size: 28px;
 }
 
 .about {
@@ -319,23 +262,23 @@ em {
     grid-template-columns: 1fr 1.2fr;
     gap: 80px;
     border-block: 1px solid var(--line);
-    padding-block: 47px
+    padding-block: 47px;
 }
 
 .about .eyebrow {
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 h2 {
     font: 38px/1.2 var(--serif);
     letter-spacing: -.7px;
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .about>div>p:not(.eyebrow) {
     color: var(--muted);
     font-size: 13px;
-    line-height: 1.95
+    line-height: 1.95;
 }
 
 .about-meta {
@@ -343,11 +286,11 @@ h2 {
     flex-wrap: wrap;
     gap: 12px 26px;
     font-size: 10px;
-    color: var(--gold)
+    color: var(--gold);
 }
 
 .members {
-    padding-block: 72px
+    padding-block: 72px;
 }
 
 .section-head {
@@ -355,34 +298,34 @@ h2 {
     justify-content: space-between;
     gap: 25px;
     align-items: end;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 .section-head .eyebrow {
-    margin-bottom: 13px
+    margin-bottom: 13px;
 }
 
 .section-head>p {
     font-size: 12px;
     color: var(--muted);
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 .member-grid {
     display: grid;
     grid-template-columns: repeat(3,minmax(0,1fr));
-    gap: 23px
+    gap: 23px;
 }
 
 .member-card {
     background: var(--panel);
     border: 1px solid var(--line);
-    transition: transform .25s,border-color .25s
+    transition: transform .25s,border-color .25s;
 }
 
 .member-card:hover {
     transform: translateY(-5px);
-    border-color: #9c7850
+    border-color: #9c7850;
 }
 
 .portrait {
@@ -391,15 +334,15 @@ h2 {
     place-items: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg,#4f2430,#291a20)
+    background: linear-gradient(135deg,#4f2430,#291a20);
 }
 
 .portrait-1 {
-    background: linear-gradient(135deg,#514232,#25201d)
+    background: linear-gradient(135deg,#514232,#25201d);
 }
 
 .portrait-2 {
-    background: linear-gradient(135deg,#353233,#211e20)
+    background: linear-gradient(135deg,#353233,#211e20);
 }
 
 .portrait-lines {
@@ -409,7 +352,7 @@ h2 {
     border: 1px solid #d6b78533;
     border-radius: 120px 120px 0 0;
     transform: rotate(22deg);
-    top: 20px
+    top: 20px;
 }
 
 .portrait-lines:after {
@@ -417,13 +360,13 @@ h2 {
     position: absolute;
     inset: 18px;
     border: 1px solid #d6b78522;
-    border-radius: inherit
+    border-radius: inherit;
 }
 
 .initials {
     font: 80px var(--serif);
     color: #e9cd9a;
-    z-index: 1
+    z-index: 1;
 }
 
 .member-number {
@@ -431,7 +374,7 @@ h2 {
     top: 17px;
     left: 20px;
     font-size: 10px;
-    color: #ddc5ac
+    color: #ddc5ac;
 }
 
 .role {
@@ -443,7 +386,7 @@ h2 {
     background: #21191ae6;
     font-size: 9px;
     letter-spacing: 1px;
-    color: #f0d8ad
+    color: #f0d8ad;
 }
 
 .portrait img {
@@ -451,29 +394,29 @@ h2 {
     height: 100%;
     object-fit: cover;
     position: absolute;
-    inset: 0
+    inset: 0;
 }
 
 .card-body {
-    padding: 24px
+    padding: 24px;
 }
 
 .nim {
     font-size: 9px;
     letter-spacing: 1.8px;
-    color: var(--gold)
+    color: var(--gold);
 }
 
 h3 {
     font: 26px var(--serif);
-    margin: 9px 0 13px
+    margin: 9px 0 13px;
 }
 
 .card-body p {
     font-size: 12px;
     color: var(--muted);
     line-height: 1.85;
-    min-height: 67px
+    min-height: 67px;
 }
 
 .profile-link {
@@ -483,31 +426,31 @@ h3 {
     border-top: 1px solid var(--line);
     padding-top: 15px;
     font-size: 11px;
-    color: var(--gold)
+    color: var(--gold);
 }
 
 .profile-link span {
-    font-size: 21px
+    font-size: 21px;
 }
 
 .closing {
     text-align: center;
-    padding: 35px 0 65px
+    padding: 35px 0 65px;
 }
 
 .closing-star {
     font-size: 30px;
-    color: var(--gold)
+    color: var(--gold);
 }
 
 .closing p {
     font: 32px/1.4 var(--serif);
-    margin: 18px 0 23px
+    margin: 18px 0 23px;
 }
 
 .closing .eyebrow {
     font-size: 8px;
-    color: var(--muted)
+    color: var(--muted);
 }
 
 .footer {
@@ -519,20 +462,20 @@ h3 {
     border-top: 1px solid var(--line);
     padding-block: 25px;
     font-size: 10px;
-    color: var(--muted)
+    color: var(--muted);
 }
 
 .footer p {
-    margin: 0
+    margin: 0;
 }
 
 .footer-brand {
     font: 20px var(--serif);
-    color: var(--text)
+    color: var(--text);
 }
 
 .footer-brand span {
-    color: var(--gold)
+    color: var(--gold);
 }
 
 .skip {
@@ -542,76 +485,76 @@ h3 {
     z-index: 30;
     background: var(--gold);
     color: #141212;
-    padding: 12px
+    padding: 12px;
 }
 
 .skip:focus {
-    top: 12px
+    top: 12px;
 }
 
 .back {
     display: inline-block;
     color: var(--gold);
     font-size: 12px;
-    margin-bottom: 35px
+    margin-bottom: 35px;
 }
 
 .profile-page {
-    padding-block: 50px 80px
+    padding-block: 50px 80px;
 }
 
 .profile-layout {
     display: grid;
     grid-template-columns: .85fr 1.2fr;
     gap: 65px;
-    align-items: start
+    align-items: start;
 }
 
 .profile-portrait {
-    height: 500px
+    height: 500px;
 }
 
 .profile-portrait .initials {
-    font-size: 110px
+    font-size: 110px;
 }
 
 .profile-portrait .portrait-lines {
     width: 330px;
     height: 480px;
     top: 70px;
-    border-radius: 180px 180px 0 0
+    border-radius: 180px 180px 0 0;
 }
 
 .profile-copy h1 {
-    font-size: 55px
+    font-size: 55px;
 }
 
 .profile-nim {
     font-size: 11px;
-    color: var(--gold)
+    color: var(--gold);
 }
 
 .profile-copy h2 {
     font: 22px var(--serif);
-    margin: 28px 0 12px
+    margin: 28px 0 12px;
 }
 
 .profile-copy>p:not(.eyebrow):not(.profile-nim) {
     color: var(--muted);
-    font-size: 14px
+    font-size: 14px;
 }
 
 .skills {
     display: flex;
     gap: 9px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .skills span {
     border: 1px solid #685338;
     padding: 6px 12px;
     color: var(--gold);
-    font-size: 11px
+    font-size: 11px;
 }
 
 blockquote {
@@ -619,36 +562,36 @@ blockquote {
     margin: 30px 0;
     padding: 10px 20px;
     color: #e5c495;
-    font: italic 22px/1.5 var(--serif)
+    font: italic 22px/1.5 var(--serif);
 }
 
 .focus {
     border-top: 1px solid var(--line);
-    padding-top: 20px
+    padding-top: 20px;
 }
 
 .focus strong {
     display: block;
     color: var(--text);
     font-size: 13px;
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 .error-page {
-    padding-block: 100px
+    padding-block: 100px;
 }
 
 .error-page>p {
-    color: var(--muted)
+    color: var(--muted);
 }
 
 @media(min-width:900px) {
     .hero-copy {
-        animation: appear .7s ease both
+        animation: appear .7s ease both;
     }
 
     .hero-art {
-        animation: appear .9s ease both
+        animation: appear .9s ease both;
     }
 
 }
@@ -656,237 +599,193 @@ blockquote {
 @keyframes appear {
     from {
         opacity: 0;
-        transform: translateY(16px)
+        transform: translateY(16px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0)
+        transform: translateY(0);
     }
 
 }
 
 @media(max-width:1000px) {
     .wrap {
-        width: calc(100% - 56px)
+        width: calc(100% - 56px);
     }
 
     .hero {
-        gap: 35px
+        gap: 35px;
     }
 
     .hero-art {
-        height: 370px
+        height: 370px;
     }
 
     .art-word {
-        font-size: 52px
+        font-size: 52px;
     }
 
     .about {
-        gap: 40px
+        gap: 40px;
     }
 
     .card-body {
-        padding: 19px
+        padding: 19px;
     }
 
     .card-body p {
-        min-height: 90px
+        min-height: 90px;
     }
 
     .profile-layout {
-        gap: 35px
+        gap: 35px;
     }
 
     .profile-copy h1 {
-        font-size: 43px
+        font-size: 43px;
     }
 
 }
 
 @media(max-width:720px) {
     .wrap {
-        width: calc(100% - 36px)
-    }
-
-    .nav {
-        min-height: 82px;
-        gap: 12px;
-        flex-wrap: wrap;
-        padding-block: 15px
-    }
-
-    .brand {
-        font-size: 15px
-    }
-
-    .brand small {
-        font-size: 7px
-    }
-
-    .brand-icon {
-        width: 33px;
-        height: 37px;
-        font-size: 25px
-    }
-
-    nav {
-        gap: 17px;
-        font-size: 11px
-    }
-
-    .nav-cta {
-        padding: 6px 10px
-    }
-
-    .nav-cta span {
-        margin-left: 6px
+        width: calc(100% - 36px);
     }
 
     .hero {
         grid-template-columns: 1fr;
         padding-block: 43px;
-        gap: 36px
+        gap: 36px;
     }
 
     h1 {
-        font-size: 57px
+        font-size: 57px;
     }
 
     .hero-art {
-        height: 320px
+        height: 320px;
     }
 
     .art-word {
         top: 105px;
-        font-size: 59px
+        font-size: 59px;
     }
 
     .art-star {
-        top: 45px
+        top: 45px;
     }
 
     .hero .lead {
-        max-width: 100%
+        max-width: 100%;
     }
 
     .about {
         grid-template-columns: 1fr;
         gap: 20px;
-        padding-block: 35px
+        padding-block: 35px;
     }
 
     h2 {
-        font-size: 33px
+        font-size: 33px;
     }
 
     .members {
-        padding-block: 44px
+        padding-block: 44px;
     }
 
     .section-head {
-        display: block
+        display: block;
     }
 
     .section-head>p {
-        margin-top: 15px
+        margin-top: 15px;
     }
 
     .member-grid {
         grid-template-columns: 1fr;
-        gap: 25px
+        gap: 25px;
     }
 
     .portrait {
-        height: 285px
+        height: 285px;
     }
 
     .card-body {
-        padding: 24px
+        padding: 24px;
     }
 
     .card-body p {
-        min-height: 0
+        min-height: 0;
     }
 
     .closing {
-        padding: 15px 0 45px
+        padding: 15px 0 45px;
     }
 
     .closing p {
-        font-size: 27px
+        font-size: 27px;
     }
 
     .footer {
-        gap: 13px
+        gap: 13px;
     }
 
     .footer p {
         order: 3;
-        width: 100%
+        width: 100%;
     }
 
     .profile-layout {
         grid-template-columns: 1fr;
-        gap: 30px
+        gap: 30px;
     }
 
     .profile-portrait {
-        height: 370px
+        height: 370px;
     }
 
     .profile-copy h1 {
-        font-size: 45px
+        font-size: 45px;
     }
 
     .profile-page {
-        padding-top: 30px
+        padding-top: 30px;
     }
 
     .eyebrow {
         font-size: 9px;
-        letter-spacing: 1.5px
+        letter-spacing: 1.5px;
     }
 
 }
 
 @media(max-width:400px) {
-    nav {
-        width: 100%;
-        justify-content: space-between
-    }
-
     .hero h1 {
-        font-size: 49px
+        font-size: 49px;
     }
 
     .hero-note {
-        font-size: 9px
+        font-size: 9px;
     }
 
 }
 
 @media(prefers-reduced-motion:reduce) {
     html {
-        scroll-behavior: auto
+        scroll-behavior: auto;
     }
 
     *,
     *:before,
     *:after {
         animation: none!important;
-        transition: none!important
+        transition: none!important;
     }
 
 }
 
 /* Text contrast update: explicit colors keep headings and links readable. */
-:root {
-    --text: #fff6e9;
-    --muted: #d4cbc3;
-    --gold: #e7c58b
-}
 
 .brand,
 .brand:visited,
@@ -898,18 +797,18 @@ blockquote {
 .profile-copy h2,
 .closing p,
 .error-page h1 {
-    color: var(--text)
+    color: var(--text);
 }
 
-nav a,
-nav a:visited {
-    color: #eee3d5
+.nav-links a,
+.nav-links a:visited {
+    color: #eee3d5;
 }
 
-nav a:hover,
-nav a[aria-current],
-nav a:focus-visible {
-    color: var(--gold)
+.nav-links a:hover,
+.nav-links a[aria-current],
+.nav-links a:focus-visible {
+    color: var(--gold);
 }
 
 .brand small,
@@ -922,14 +821,14 @@ nav a:focus-visible {
 .footer p,
 .footer>a:not(.footer-brand),
 .closing .eyebrow {
-    color: var(--muted)
+    color: var(--muted);
 }
 
 .hero h1 em,
 .about h2 em,
 .section-head h2 em,
 .closing p em {
-    color: var(--gold)
+    color: var(--gold);
 }
 
 .eyebrow,
@@ -941,56 +840,52 @@ nav a:focus-visible {
 .profile-nim,
 .skills span,
 .about-meta {
-    color: var(--gold)
+    color: var(--gold);
 }
 
 .art-word {
-    color: #fff6e9
+    color: #fff6e9;
 }
 
 .art-word i {
-    color: #ffe0a6
+    color: #ffe0a6;
 }
 
 .art-top,
 .art-bottom {
-    color: #f5e6d3
+    color: #f5e6d3;
 }
 
 .initials {
-    color: #ffe0a6
+    color: #ffe0a6;
 }
 
 .member-number {
-    color: #f5e6d3
+    color: #f5e6d3;
 }
 
 .role {
     color: #ffe0a6;
-    background: #24191e
+    background: #24191e;
 }
 
 .button,
 .button:visited,
 .button:hover,
 .button:focus-visible {
-    color: #21170f
+    color: #21170f;
 }
 
 .button span {
-    color: inherit
+    color: inherit;
 }
 
 .footer-brand,
 .footer-brand:visited {
-    color: var(--text)
+    color: var(--text);
 }
 
 /* Black backgrounds as requested. */
-:root {
-    --bg: #000000;
-    --panel: #000000
-}
 
 body,
 .header,
@@ -1000,83 +895,69 @@ body,
 .portrait-1,
 .portrait-2,
 .role {
-    background: #000000
+    background: #000000;
 }
 
 .hero-art {
-    border-color: #6c5639
+    border-color: #6c5639;
 }
 
 .mini-avatars i,
 .mini-avatars i:nth-child(2),
 .mini-avatars i:nth-child(3) {
-    background: #000000
+    background: #000000;
 }
 
 /* Final palette: predominantly black, maroon panels, and gold accents. */
-:root {
-    --bg: #000000;
-    --panel: #100d0e;
-    --maroon: #541c2b;
-    --gold: #e7c58b;
-    --text: #fff6e9;
-    --muted: #d4cbc3
-}
 
 body,
 .header {
-    background: #000000
+    background: #000000;
 }
 
 .member-card {
     background: var(--panel);
-    border-color: #38272d
+    border-color: #38272d;
 }
 
 .hero-art {
     background: #541c2b;
-    border-color: #79404f
+    border-color: #79404f;
 }
 
 .portrait,
 .portrait-1,
 .portrait-2 {
-    background: #35151f
+    background: #35151f;
 }
 
 .role {
     background: #1b0d12;
     color: #ffe0a6;
-    border-color: #8b6a47
+    border-color: #8b6a47;
 }
 
-.nav-cta {
-    background: #541c2b;
-    border-color: #79404f;
-    color: #fff6e9
-}
-
-nav .nav-cta:hover,
-nav .nav-cta:focus-visible {
+.nav-links .nav-cta:hover,
+.nav-links .nav-cta:focus-visible {
     background: #692438;
-    color: #ffe0a6
+    color: #ffe0a6;
 }
 
 .mini-avatars i,
 .mini-avatars i:nth-child(2),
 .mini-avatars i:nth-child(3) {
-    background: #541c2b
+    background: #541c2b;
 }
 
 .art-grid,
 .orbit,
 .portrait-lines {
-    display: none
+    display: none;
 }
 
 .member-card:hover {
     transform: none;
-    border-color: #b58b53
+    border-color: #b58b53;
 }
 
 /* Maroon panel: keep the heading and footer in normal document flow. */
@@ -1158,5 +1039,125 @@ nav .nav-cta:focus-visible {
 
     .hero-art .art-word {
         font-size: clamp(26px, 5.5vw, 38px);
+    }
+}
+
+/* Navbar: logo dan nama di kiri, menu di kanan. */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 88px;
+    padding-block: 16px;
+    gap: 24px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    color: var(--text);
+}
+
+.navbar-logo {
+    display: block;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 5px;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.brand small {
+    display: block;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-shrink: 0;
+    font-size: 13px;
+}
+
+.nav-links > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-links .nav-cta {
+    justify-content: center;
+    gap: 18px;
+    padding: 10px 18px;
+    border: 1px solid #79404f;
+    background: var(--maroon);
+    color: var(--text);
+}
+
+.nav-cta span {
+    color: var(--gold);
+}
+
+@media (max-width: 720px) {
+    html {
+        scroll-padding-top: 160px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding-block: 14px;
+    }
+
+    .brand {
+        gap: 12px;
+    }
+
+    .navbar-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand-name {
+        font-size: 16px;
+    }
+
+    .brand small {
+        font-size: 8px;
+        letter-spacing: 0.6px;
+    }
+
+    .nav-links {
+        justify-content: space-between;
+        width: 100%;
+        gap: 16px;
+        padding-top: 10px;
+        border-top: 1px solid var(--line);
+    }
+
+    .nav-links .nav-cta {
+        padding: 8px 16px;
     }
 }
